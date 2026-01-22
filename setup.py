@@ -7,7 +7,9 @@ from os import path
 # Always prefer setuptools over distutils
 from setuptools import setup, find_packages
 #configs do pacote
-from pjbank.config import __version__, __packagename__
+#from pjbank.config import __version__, __packagename__
+__version__ = "0.9dev4"
+__packagename__ = "pjbank"
 
 HERE = path.abspath(path.dirname(__file__))
 
@@ -78,7 +80,7 @@ setup(
     # your project is installed. For an analysis of "install_requires" vs pip's
     # requirements files see:
     # https://packaging.python.org/en/latest/requirements.html
-    install_requires=['requests>=2.32.3'],
+    install_requires=['requests'],
 
     # List additional groups of dependencies here (e.g. development
     # dependencies). You can install these using the following syntax,
