@@ -47,5 +47,12 @@ class Boleto(Recebimentos):
         return response
 
     @automatico
+    def consultar(self, id_unico):
+        headers = self.headers_content
+        headers.update(self.headers_chave)
+        response = self._get(['transacoes', id_unico], headers)
+        return response
+
+    @automatico
     def verificar_nao_liquidados(self):
         response = self._consulta()        
